@@ -1,0 +1,215 @@
+/* l/S hover effect */
+
+.button {
+  padding: 5px 10px 5px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #ffffff00;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #9600ff;
+  box-shadow: 0px 15px 20px rgba(141, 46, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button:active {
+  transform: translateY(-1px);
+}
+
+.button1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #9600ff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button1:hover {
+  background-color: #9600ff;
+  box-shadow: 0px 15px 20px rgba(141, 46, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button1:active {
+  transform: translateY(-1px);
+}
+
+/* Animated-text  */
+
+.animated-text {
+  color: #fff;
+  /* Initial color */
+  animation: color-change 8s infinite alternate ease-in-out;
+}
+
+@keyframes color-change {
+  0% {
+    color: #9747ff;
+  }
+
+  /* Start with white */
+
+  20% {
+    color: #3dc0bb;
+  }
+
+  /* 1st color change at 20% */
+
+  40% {
+    color: #44a0fc;
+  }
+
+  /* 2nd color change at 40% */
+
+  60% {
+    color: #015cdc;
+  }
+
+  /* 3rd color change at 60% */
+
+  80% {
+    color: #4e5edb;
+  }
+
+  /* 4th color change at 80% */
+
+  100% {
+    color: #152169;
+  }
+
+  /* Back to white at 100% */
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  /* Adjust width as desired */
+  height: 11px;
+  /* Adjust height as desired */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f8ff;
+}
+
+/* Reduce thumb size */
+
+::-webkit-scrollbar-thumb {
+  width: 6px;
+  /* Adjust width for thumb size reduction */
+  height: 8px;
+  /* Adjust height for thumb size reduction */
+  background: #8800ff;
+}
+
+.line {
+  line-height: 12px;
+}
+
+.strap {
+  background-image: linear-gradient(to right, #9747ff, #180a2a);
+}
+
+.button2 {
+  background-color: #9600ff;
+  transition: all 0.3s ease 0s;
+}
+
+.button2:hover {
+  background-color: #9600ff;
+  box-shadow: 0px 15px 20px rgba(141, 46, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button2:active {
+  transform: translateY(-1px);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  list-style-type: none;
+  height: 100%;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  color: #9600ff;
+}
+
+.nav a:hover::before {
+  width: 100%;
+}
+
+.navy {
+  background-image: linear-gradient(to right, #000000, #121010, #603d8e);
+}
+
+.progress-bar {
+  height: 10px;
+  width: 250px;
+  background-color: white;
+  background-clip: border-box;
+  /* Ensures background covers the entire element */
+  position: relative;
+  /* Allows positioning of the progress fill */
+}
+
+.progress-bar::after {
+  content: "";
+  /* Add pseudo-element to represent progress fill */
+  position: absolute;
+  width: 10px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* Fills the entire height of the progress bar */
+  bar::after {
+    content: "";
+    /* Add pseudo-element to represent progress fill */
+    position: absolute;
+    width: 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Fills the entire height of the progress bar */
+    background-color: #9600ff;
+  }
+}

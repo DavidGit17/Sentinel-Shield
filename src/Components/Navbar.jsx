@@ -12,9 +12,9 @@ function Navbar() {
     <div className="max-w-screen-xlg ">
       <nav className="flex justify-between items-center h-16 font-inter">
         <Link to="/" className="text-[18px] pr-4">
-          <ul className="leading-5">
+          <ul className="leading-[22px]">
             <li className="text-white">SENTINEL</li>
-            <li className="text-custom-purp">SHIELD</li>
+            <li className="text-custom-purp font-semibold">SHIELD</li>
           </ul>
         </Link>
 
@@ -54,7 +54,7 @@ function Navbar() {
         </ul>
 
         <div>
-          <Link className="text-white border font-medium border-custom-Br-gray hover:bg-white hover:text-black px-8 leading-none py-3 rounded-[8px] flex justify-center text-[15px]">
+          <Link className="text-white border font-medium border-custom-Br-gray hover:bg-white hover:text-black px-10 leading-none py-[13.5px] rounded-[8px] flex justify-center text-[15px]">
             Sign in
           </Link>
         </div>

@@ -1,12 +1,12 @@
-import React from 'react'
-import Navbar from '../Components/Navbar'
+import React from "react";
+import Navbar from "../Components/Navbar";
 
 function HomePage() {
   return (
-    <div>
-      
+    <div className="h-screen">
+      <h2 className="text-white">Hello</h2>
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

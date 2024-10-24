@@ -3,3 +3,33 @@
 @tailwind utilities;
 
 @import "./fonts.css";
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    /* Adjust width as desired */
+    height: 11px;
+    /* Adjust height as desired */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f0f8ff;
+  }
+  
+  /* Reduce thumb size */
+  
+  ::-webkit-scrollbar-thumb {
+    width: 6px;
+    /* Adjust width for thumb size reduction */
+    height: 8px;
+    /* Adjust height for thumb size reduction */
+    background: #8800ff;
+  }
+  
+  .line {
+    line-height: 12px;
+  }
+  
+  .strap {
+    background-image: linear-gradient(to right, #9747ff, #180a2a);
+  }

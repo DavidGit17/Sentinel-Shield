@@ -4,13 +4,15 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}',],
   theme: {
     extend: {
-      fontFamily:{
-        inter:['Inter', 'mono'],
-        playwrite:['Playwrite', 'mono'],
+      fontFamily: {
+        inter: ['Inter', 'mono'],
       },
-      colors:{
-        'custom-purple': '#9600ff' ,
-        'custom-skyblue': '#38329d' ,
+      colors: {
+        'custom-purp': '#9600ff',
+        'custom-D-gray': '#696969',
+        'custom-H-gray': '#5E5E5E',
+        'custom-C-gray': '#9E9E9E',
+        'custom-Br-gray': '#616161',
       },
     },
   },

@@ -1,62 +1,49 @@
-import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import {
+  TransformingNavbar,
+  ClassicNavbar,
+  FloatingNavbar,
+} from "@kiranalex/projectui";
+import React, { useState, useEffect } from "react";
 
 function Navbar() {
-  // Helper function to determine active class and hover behavior
-  const getNavLinkClass = (isActive) =>
-    isActive
-      ? "text-custom-C-gray"
-      : "text-custom-D-gray hover:text-custom-H-gray";
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="max-w-screen-xlg ">
-      <nav className="flex justify-between items-center h-16 font-inter">
-        <Link to="/" className="text-[18px] pr-4">
-          <ul className="leading-[22px]">
-            <li className="text-white">SENTINEL</li>
-            <li className="text-custom-purp font-semibold">SHIELD</li>
-          </ul>
-        </Link>
-
-        <ul className="flex space-x-10 navtabs px-5 text-[15px] font-semibold">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => getNavLinkClass(isActive)}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/whysentinel"
-              className={({ isActive }) => getNavLinkClass(isActive)}
-            >
-              Why Sentinel
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/aboutus"
-              className={({ isActive }) => getNavLinkClass(isActive)}
-            >
-              About Us
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contactus"
-              className={({ isActive }) => getNavLinkClass(isActive)}
-            >
-              Contact Us
-            </NavLink>
-          </li>
-        </ul>
-
+    <div
+      className={` h-16 w-full nav-wrapper flex ${
+        isScrolled ? "px-10" : "px-none"
+      }`}
+    >
+      <nav
+        className={`nav-bg text-white w-full flex items-center justify-between h-16 fixed top-0 transition-all duration-300 bg-black/80 backdrop-blur-[9px] bg-opacity-70 z-10 shadow-lg 
+          ${isScrolled ? "px-10" : ""}`}
+      >
         <div>
-          <Link className="text-white border font-medium border-custom-Br-gray hover:bg-white hover:text-black px-10 leading-none py-[13.5px] rounded-[8px] flex justify-center text-[15px]">
-            Sign in
-          </Link>
+          <p>LOGO</p>
+        </div>
+        <div className="flex">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+        </div>
+        <div>
+          <p>LOGIN</p>
         </div>
       </nav>
     </div>
@@ -64,3 +51,28 @@ function Navbar() {
 }
 
 export default Navbar;
+
+// {
+//   /* <TransformingNavbar
+//         listData={navListData}
+//         logo={{
+//           content: "Logo",
+
+//           link: "/",
+
+//           ButtonContent: "Click Me",
+
+//           ButtonStyle: "bg-blue-500 text-white",
+
+//           logoStyle: "text-white",
+//         }}
+//         textColor="blue"
+//         backgroundColor="black"
+//       /> */
+//   // const navListData = [
+//   //   { name: "Home", link: "/" },
+//   //   { name: "About", link: "/about" },
+//   //   { name: "Contact", link: "/contact" },
+//   //   { name: "Me", link: "/me" },
+//   // ];
+// }

@@ -1,10 +1,11 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
+import HeroSection from "../Components/HeroSection";
 
 function HomePage() {
   return (
-    <div className="h-screen">
-      <h2 className="text-white">Hello</h2>
+    <div className="">
+      <HeroSection />
+      <div className="h-screen bg-white"></div>
     </div>
   );
 }
